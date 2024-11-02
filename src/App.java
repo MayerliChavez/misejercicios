@@ -1,18 +1,30 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        
-       System.out.print("Serie de numeros creada para S2:");
+        new presentacion.saludo().presentacion();
+
+       System.out.print("Serie de numeros");
        System.out.println(" ");
-       new numeros.Serienumeros().Serie2(10);
+       System.out.print("S2:");
+       System.out.println(" ");
+       new series.Serienumeros().g2_crearSerienumericaS2(10);
+
        
        System.out.println(" ");
-       System.out.print("Serie de numeros creada para S9:");
+       System.out.print("S4: ");
        System.out.println(" ");
-       new numeros.Serienumeros().Serie9(15);
+       //
 
        System.out.println(" ");
-       System.out.print("Serie de caracteres creada para S3:");
+       System.out.print("S9: ");
        System.out.println(" ");
-       new caracteres.Seriecaracteres().Serie3(10);
+       new series.Serienumeros().g2_crearSerienumericaS9(15);
+
+
+       System.out.println(" ");
+       System.out.print("Serie de caracteres");
+       System.out.println(" ");
+       System.out.print("S3:");
+       System.out.println(" ");
+       new series.Seriecaracteres().g2_crearSeriecaractereS3(10);
     }
 }
