@@ -24,8 +24,8 @@ public class Serienumeros {
    public void Serie9(int rango){
     double n=1d;
         while ( n <= rango){
-            double elevator = Math.pow(2,n);
-            System.out.print((int)(elevator) + " ");
+            double elevador = Math.pow(2,n);
+            System.out.print((int)(elevador) + " ");
             n++;
         }
    }
