@@ -11,5 +11,22 @@ public class Serienumeros {
                 System.out.print("0 ");
                 }
             }    
+    }
+
+    public void Serie4(int rango){
+        for(int i = 0 ; i <= rango ; i++){
+            for(int j= 1; i <= rango; j++){
+
+            }
         }
+    }
+
+   public void Serie9(int rango){
+    double n=1d;
+        while ( n <= rango){
+            double elevator = Math.pow(2,n);
+            System.out.print((int)(elevator) + " ");
+            n++;
+        }
+   }
 }
