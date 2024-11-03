@@ -61,6 +61,11 @@ public class Figuras {
         int tamanio= leer.nextInt();
         System.out.println("La figura es: ");
 
-        
+        for (int fila = tamanio ; fila >= 0; fila--) {
+            for (int columna = 1; columna < tamanio - fila; columna++) {
+                System.out.print(columna + " ");
+            }
+            System.out.println("");
+        }
     }
 }

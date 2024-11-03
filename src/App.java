@@ -52,6 +52,11 @@ public class App {
        System.out.println(" ");
        new figurascadenas.Figuras().g2_crearFigurasS12();
 
+       System.out.println(" ");
+       System.out.print("S13: ");
+       System.out.println(" ");
+       new figurascadenas.Figuras().g2_crearFigurasS13();
+
        leer.close();
     }
 }
