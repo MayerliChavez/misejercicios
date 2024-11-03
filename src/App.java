@@ -36,26 +36,43 @@ public class App {
        new series.Seriecaracteres().g2_crearSeriecaractereS8();
 
        System.out.println(" ");
-       System.out.print("Figuras");
+       System.out.print("Figuras: ");
        System.out.println(" ");
-       System.out.print("S5:");
+       System.out.print("F5:");
        System.out.println(" ");
-       new figurascadenas.Figuras().g2_crearFigurasS5();
+       new figurascadenas.Figuras().g2_crearFigurasF5();
 
        System.out.println(" ");
-       System.out.print("S7: ");
+       System.out.print("F7: ");
        System.out.println(" ");
-       new figurascadenas.Figuras().g2_crearFigurasS7();
+       new figurascadenas.Figuras().g2_crearFigurasF7();
 
        System.out.println(" ");
-       System.out.print("S12: ");
+       System.out.print("F12: ");
        System.out.println(" ");
-       new figurascadenas.Figuras().g2_crearFigurasS12();
+       new figurascadenas.Figuras().g2_crearFigurasF12();
 
        System.out.println(" ");
-       System.out.print("S13: ");
+       System.out.print("F13: ");
        System.out.println(" ");
-       new figurascadenas.Figuras().g2_crearFigurasS13();
+       new figurascadenas.Figuras().g2_crearFigurasF13();
+
+       System.out.println(" ");
+       System.out.print("Cadenas de caracteres:");
+       System.out.println(" ");
+       System.out.print("C02:");
+       System.out.println(" ");
+       new figurascadenas.Cadenas().g2_crearCadenaCaracteresC02();
+
+       System.out.println(" ");
+       System.out.print("C06: ");
+       System.out.println(" ");
+       new figurascadenas.Cadenas().g2_crearCadenaCaracteresC06();
+
+       System.out.println(" ");
+       System.out.print("C07: ");
+       System.out.println(" ");
+       new figurascadenas.Cadenas().g2_crearCadenaCaracteresC07();
 
        leer.close();
     }

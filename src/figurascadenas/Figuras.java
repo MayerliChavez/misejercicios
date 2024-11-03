@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Figuras {
     Scanner leer = new Scanner(System.in);
-    public void g2_crearFigurasS5(){
+    public void g2_crearFigurasF5(){
         System.out.print("Ingrese el tamanio de la figura: ");
         int tamanio= leer.nextInt();
         System.out.println("La figura es: ");
@@ -22,7 +22,7 @@ public class Figuras {
         System.out.println(" ");
     }
 
-    public void g2_crearFigurasS7(){
+    public void g2_crearFigurasF7(){
         System.out.print("Ingrese el tamanio de la figura: ");
         int tamanio= leer.nextInt();
         System.out.println("La figura es: ");
@@ -42,7 +42,7 @@ public class Figuras {
         System.out.println("");
     }
 
-    public void g2_crearFigurasS12(){
+    public void g2_crearFigurasF12(){
         System.out.print("Ingrese el tamanio de la figura: ");
         int tamanio= leer.nextInt();
         System.out.println("La figura es: ");
@@ -56,7 +56,7 @@ public class Figuras {
         System.out.println(" ");
     }
 
-    public void g2_crearFigurasS13(){
+    public void g2_crearFigurasF13(){
         System.out.print("Ingrese el tamanio de la figura: ");
         int tamanio= leer.nextInt();
         System.out.println("La figura es: ");
