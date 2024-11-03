@@ -1,23 +1,26 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) throws Exception {
+        Scanner leer = new Scanner(System.in);
         new presentacion.saludo().presentacion();
 
        System.out.print("Serie de numeros");
        System.out.println(" ");
        System.out.print("S2:");
        System.out.println(" ");
-       new series.Serienumeros().g2_crearSerienumericaS2(10);
+       new series.Serienumeros().g2_crearSerienumericaS2();
 
        
        System.out.println(" ");
        System.out.print("S4: ");
        System.out.println(" ");
-       new series.Serienumeros().g2_crearSerienumericaS4(10);
+      new series.Serienumeros().g2_crearSerienumericaS4();
 
        System.out.println(" ");
        System.out.print("S9: ");
        System.out.println(" ");
-       new series.Serienumeros().g2_crearSerienumericaS9(15);
+      new series.Serienumeros().g2_crearSerienumericaS9();
 
 
        System.out.println(" ");
@@ -25,11 +28,13 @@ public class App {
        System.out.println(" ");
        System.out.print("S3:");
        System.out.println(" ");
-       new series.Seriecaracteres().g2_crearSeriecaractereS3(15);
+       new series.Seriecaracteres().g2_crearSeriecaractereS3();
 
        System.out.println(" ");
        System.out.print("S8: ");
        System.out.println(" ");
-       new series.Seriecaracteres().g2_crearSeriecaractereS8(15);
+       new series.Seriecaracteres().g2_crearSeriecaractereS8();
+
+       leer.close();
     }
 }
