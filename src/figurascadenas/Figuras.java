@@ -8,6 +8,7 @@ public class Figuras {
         System.out.print("Ingrese el tamanio de la figura: ");
         int tamanio= leer.nextInt();
         System.out.println("La figura es: ");
+
         for(int fila = tamanio; fila > 0 ; fila --){
             for(int espacios = 0; espacios < tamanio - fila; espacios ++){
                 System.out.print("  ");
@@ -21,7 +22,7 @@ public class Figuras {
         System.out.println(" ");
     }
 
-    public void g2_crearfigurasS7(){
+    public void g2_crearFigurasS7(){
         System.out.print("Ingrese el tamanio de la figura: ");
         int tamanio= leer.nextInt();
         System.out.println("La figura es: ");
@@ -38,6 +39,28 @@ public class Figuras {
             System.out.print("|__");
             System.out.println("");
         }
-    
+        System.out.println("");
+    }
+
+    public void g2_crearFigurasS12(){
+        System.out.print("Ingrese el tamanio de la figura: ");
+        int tamanio= leer.nextInt();
+        System.out.println("La figura es: ");
+
+        for (int fila = 1; fila  <= tamanio; fila++) {
+            for (int columna = 1; columna <= tamanio - fila ; columna++) {
+                System.out.print(columna + " ");
+            }
+            System.out.println("");
+        }
+        System.out.println(" ");
+    }
+
+    public void g2_crearFigurasS13(){
+        System.out.print("Ingrese el tamanio de la figura: ");
+        int tamanio= leer.nextInt();
+        System.out.println("La figura es: ");
+
+        
     }
 }

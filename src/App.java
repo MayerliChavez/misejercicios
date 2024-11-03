@@ -43,10 +43,14 @@ public class App {
        new figurascadenas.Figuras().g2_crearFigurasS5();
 
        System.out.println(" ");
-       System.out.print("S8: ");
+       System.out.print("S7: ");
        System.out.println(" ");
-       new figurascadenas.Figuras().g2_crearfigurasS7();
+       new figurascadenas.Figuras().g2_crearFigurasS7();
 
+       System.out.println(" ");
+       System.out.print("S12: ");
+       System.out.println(" ");
+       new figurascadenas.Figuras().g2_crearFigurasS12();
 
        leer.close();
     }
