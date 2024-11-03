@@ -35,6 +35,13 @@ public class App {
        System.out.println(" ");
        new series.Seriecaracteres().g2_crearSeriecaractereS8();
 
+       System.out.println(" ");
+       System.out.print("Figuras");
+       System.out.println(" ");
+       System.out.print("S5:");
+       System.out.println(" ");
+       new figurascadenas.Figuras().g2_crearFigurasS5();
+
        leer.close();
     }
 }
