@@ -26,5 +26,10 @@ public class App {
        System.out.print("S3:");
        System.out.println(" ");
        new series.Seriecaracteres().g2_crearSeriecaractereS3(15);
+
+       System.out.println(" ");
+       System.out.print("S8: ");
+       System.out.println(" ");
+       new series.Seriecaracteres().g2_crearSeriecaractereS8(15);
     }
 }

@@ -25,5 +25,17 @@ public class Seriecaracteres {
      System.out.println(" ");
     }
 
-    
+    public void g2_crearSeriecaractereS8(int valor){
+        int numeroletra = 97;
+        for (int i = 1; i <= valor; i+=2){
+            int indiceserie = 1;
+            while (indiceserie <= i){
+                 System.out.print((char)(numeroletra));
+                 indiceserie ++;
+            }
+            System.out.print("  ");
+            numeroletra ++;
+        }
+        System.out.println(" ");
+    }
 }
