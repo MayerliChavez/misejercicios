@@ -12,7 +12,7 @@ public class App {
        System.out.println(" ");
        System.out.print("S4: ");
        System.out.println(" ");
-       //
+       new series.Serienumeros().g2_crearSerienumericaS4(10);
 
        System.out.println(" ");
        System.out.print("S9: ");

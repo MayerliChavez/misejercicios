@@ -13,15 +13,34 @@ public class Serienumeros {
         System.out.println("");   
     }
 
-    /*public void Serie4(int rango){
-        for(int i = 0 ; i <= rango ; i++){
-            for(int j= 1; i <= rango; j++){
-
+    public void g2_crearSerienumericaS4(int rango){
+        int primerdigito = 0, segundodigito = 0, repositorio = 0, numero2 = 2;
+        while(numero2 <= 4){
+            switch (numero2) {
+                case 2:
+                    System.out.print( primerdigito + "/" + numero2);
+                    System.out.print("  ");
+                    numero2+=2;
+                    primerdigito++;
+                    break;
+                default:
+                    System.out.print( primerdigito + "/" + numero2);
+                    System.out.print("  ");
+                    numero2+=2;
+                    break;
             }
         }
 
-       System.out.println("");   
-    }*/
+        for (int i = 1 ; i <= rango ; i++){
+                repositorio= primerdigito + segundodigito;
+                System.out.print( repositorio + "/" + numero2);
+                System.out.print("  ");
+                numero2+=2;
+                segundodigito = primerdigito;
+                primerdigito = repositorio;
+        }
+        System.out.println(" ");
+    }
 
    public void g2_crearSerienumericaS9(int rango){
         double n=1d;
