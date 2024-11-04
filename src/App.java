@@ -74,6 +74,13 @@ public class App {
        System.out.println(" ");
        new figurascadenas.Cadenas().g2_crearCadenaCaracteresC07();
 
+       System.out.println(" ");
+       System.out.print("Arrays:");
+       System.out.println(" ");
+       System.out.print("A03:");
+       System.out.println(" ");
+       new arrays.Arryas().g2_crearArraysA03();
+
        leer.close();
     }
 }

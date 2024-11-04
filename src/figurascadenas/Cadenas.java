@@ -1,11 +1,11 @@
 package figurascadenas;
+import java.nio.charset.CharsetEncoder;
 import java.util.Scanner;
 import java.util.stream.Stream;
 import javax.sound.midi.Soundbank;
 
 public class Cadenas {
     Scanner leer = new Scanner(System.in);
-    String c;
 
     public void g2_crearCadenaCaracteresC02(){
         System.out.print("Introduce una frase: ");
@@ -45,15 +45,16 @@ public class Cadenas {
         }
         nuevafrase = letraFrase.reverse().toString();
         System.out.print("La frase resultante es: " + nuevafrase);
+        System.out.println(" ");
     }
 
     public void g2_crearCadenaCaracteresC07(){
         System.out.print("Introduce una frase: ");
         String frase= leer.nextLine();
 
-        String letraNuevaCadena ="";
-        letraNuevaCadena = frase.toUpperCase().replace("J","");
-        System.out.print("La nueva cadena es: " + letraNuevaCadena);
+        String fraseModificada = frase.toUpperCase().replace("J", "");
+        System.out.print("La nueva cadena es: " + fraseModificada);
+        System.out.println(" ");
     }
 
 }
