@@ -10,26 +10,23 @@ public class Arryas {
         String nombre= leer.nextLine();
 
         int longitud = nombre.length();
-        int alturaMaxima = 2 * (longitud - 1); // Altura máxima en el eje Y
+        int altura= 2 * (longitud - 1);
 
-        // Dibujar el gráfico
-        for (int y = alturaMaxima; y >= 0; y--) {
-            System.out.print(y + " | "); // Etiqueta del eje Y
+        for (int ejey = altura; ejey >= 0; ejey--) {
+            System.out.printf("%2d |", ejey);
 
             boolean letraImpreso = false;
-            for (int x = 0; x < longitud; x++) {
-                if (2 * x == y) {
-                    System.out.print(nombre.charAt(x) + " ");
+            for (int ejex = 0; ejex < longitud; ejex++) {
+                if (2 * ejex == ejey) {
+                    System.out.print(nombre.charAt(ejex) + " ");
                     letraImpreso = true;
                 } else {
-                    System.out.print("  ");
+                    System.out.print(" ");
                 }
             }
             System.out.println();
         }
-
-        // Dibujar el eje X
-        System.out.print(" 0 ");
+        System.out.print("   | ");
         for (int x = 0; x < longitud; x++) {
             System.out.print("__");
         }
