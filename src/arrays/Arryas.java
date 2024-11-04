@@ -31,5 +31,6 @@ public class Arryas {
             System.out.print("__");
         }
         System.out.println();
+        System.out.println();
     }
 }
