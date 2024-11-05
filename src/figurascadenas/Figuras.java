@@ -4,9 +4,7 @@ import java.util.Scanner;
 
 public class Figuras {
     Scanner leer = new Scanner(System.in);
-    public void g2_crearFigurasF5(){
-        System.out.print("Ingrese el tamanio de la figura: ");
-        int tamanio= leer.nextInt();
+    public void g2_crearFigurasF5(int tamanio){
         System.out.println("La figura es: ");
 
         for(int fila = tamanio; fila > 0 ; fila --){
@@ -22,9 +20,7 @@ public class Figuras {
         System.out.println(" ");
     }
 
-    public void g2_crearFigurasF7(){
-        System.out.print("Ingrese el tamanio de la figura: ");
-        int tamanio= leer.nextInt();
+    public void g2_crearFigurasF7(int tamanio){
         System.out.println("La figura es: ");
 
         for(int fila = 0 ; fila <= tamanio; fila ++){
@@ -42,9 +38,7 @@ public class Figuras {
         System.out.println("");
     }
 
-    public void g2_crearFigurasF12(){
-        System.out.print("Ingrese el tamanio de la figura: ");
-        int tamanio= leer.nextInt();
+    public void g2_crearFigurasF12(int tamanio){
         System.out.println("La figura es: ");
 
         for (int fila = 1; fila  <= tamanio; fila++) {
@@ -56,9 +50,7 @@ public class Figuras {
         System.out.println(" ");
     }
 
-    public void g2_crearFigurasF13(){
-        System.out.print("Ingrese el tamanio de la figura: ");
-        int tamanio= leer.nextInt();
+    public void g2_crearFigurasF13(int tamanio){
         System.out.println("La figura es: ");
 
         for (int fila = tamanio ; fila >= 0; fila--) {

@@ -2,34 +2,41 @@ package loading;
 
 import java.util.Scanner;
 
-public class Loagings {
+public class Loadings {
     Scanner leer = new Scanner(System.in);
     
-    public void g2_crearLoadingL03(){
-        System.out.print("Introduce el carácter para la barra de carga: ");
-        char caracter = leer.next().charAt(0);
-
+    public void g2_crearLoadingL03(char caracter) {
         int longitudBarra = 20;
-        for (int porcentaje = 0; porcentaje <= 100; porcentaje += 5) {
-            StringBuilder barra = new StringBuilder();
-
-            int posicion = (porcentaje * (longitudBarra - 1)) / 100;
-
-            for (int i = 0; i < longitudBarra; i++) {
-                if (i == posicion) {
-                    barra.append(caracter);
-                } else {
-                    barra.append(" ");
+        boolean haciaDerecha = true;
+        int posicion = 0;
+    
+        for (int porcentaje = 0; porcentaje <= 100; porcentaje ++) {
+            StringBuilder barra = new StringBuilder(" ".repeat(longitudBarra));
+    
+            barra.setCharAt(posicion, caracter);
+    
+            System.out.print("\r[" + barra + "] " + porcentaje + "%");
+    
+            if (haciaDerecha) {
+                posicion++;
+                if (posicion == longitudBarra - 1) {
+                    haciaDerecha = false;
+                }
+            } else {
+                posicion--;
+                if (posicion == 0) {
+                    haciaDerecha = true;
                 }
             }
-                    System.out.print("\r[" + barra + "] " + porcentaje + "%");
-                    try{
-                        Thread.sleep(400); 
-                        }catch(InterruptedException e){
-                           System.out.println("Retraso completado ");
-                        }
+    
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                System.out.println("Retraso completado ");
+            }
         }
-                System.out.println("\nCarga completada!");
+        System.out.print("\r[" + "                   " + caracter + "] " + "100" + "%");
+        System.out.println("\nCarga completada!");
     }
 
     public void g2_crearLoadingL05(){
@@ -58,12 +65,9 @@ public class Loagings {
         System.out.println("\n¡Carga completa!");
     }
 
-    public void g2_crearLoadingL08(){
-            System.out.print("Ingrese su nombre y apellido: ");
-            String caracter = leer.nextLine().replace(" ", "");
-            
+    public void g2_crearLoadingL08(String digito){
             int longitudFija = 20; 
-            int longitud = caracter.length();
+            int longitud = digito.length();
             for (int barracarga = 1; barracarga <= longitud; barracarga++) {
                 int porcentaje = (barracarga * 100) / longitud;
         
@@ -71,7 +75,7 @@ public class Loagings {
         
                 for (int avance = 0; avance < longitudFija; avance++) {
                     if (avance < barracarga && avance < longitud) {
-                        barra.append(caracter.charAt(avance));
+                        barra.append(digito.charAt(avance));
                     } else {
                         barra.append(" ");
                     }

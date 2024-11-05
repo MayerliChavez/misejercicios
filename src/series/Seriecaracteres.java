@@ -3,9 +3,7 @@ import java.util.Scanner;
 
 public class Seriecaracteres {
     Scanner leer = new Scanner(System.in);
-    public void g2_crearSeriecaractereS3(){
-        System.out.print("Ingrese el rango de la operacion: ");
-        int valor= leer.nextInt();
+    public void g2_crearSeriecaractereS3(int valor){
         System.out.println("La operacion es: ");
 
         for (int i = 2; i <= valor; i++) {
@@ -31,9 +29,7 @@ public class Seriecaracteres {
      System.out.println(" ");
     }
 
-    public void g2_crearSeriecaractereS8(){
-        System.out.print("Ingrese el rango de la operacion: ");
-        int valor= leer.nextInt();
+    public void g2_crearSeriecaractereS8(int valor){
         System.out.println("La operacion es: ");
         
         int numeroletra = 97;

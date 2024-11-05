@@ -7,10 +7,7 @@ import javax.sound.midi.Soundbank;
 public class Cadenas {
     Scanner leer = new Scanner(System.in);
 
-    public void g2_crearCadenaCaracteresC02(){
-        System.out.print("Introduce una frase: ");
-        String frase= leer.nextLine();
-
+    public void g2_crearCadenaCaracteresC02(String frase){
          int contador_letra =0;
          for(char c: frase.toCharArray()){
             if(Character.isLetter(c) && !esVocal(c)){
@@ -18,7 +15,6 @@ public class Cadenas {
             }
         }
         System.out.println("La frase ingresada tiene " + contador_letra + " letras.");
-        
         System.out.println(" ");
     }
     public  static boolean esVocal(char c){
@@ -26,10 +22,7 @@ public class Cadenas {
         return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
     }
 
-    public void g2_crearCadenaCaracteresC06(){
-        System.out.print("Introduce una frase: ");
-        String frase= leer.nextLine();
-
+    public void g2_crearCadenaCaracteresC06(String frase){
         StringBuilder letraFrase = new StringBuilder();
         String nuevafrase = "";
         for (char c : frase.toCharArray()) {
@@ -48,12 +41,9 @@ public class Cadenas {
         System.out.println(" ");
     }
 
-    public void g2_crearCadenaCaracteresC07(){
-        System.out.print("Introduce una frase: ");
-        String frase= leer.nextLine();
-
+    public void g2_crearCadenaCaracteresC07(String frase){
         String fraseModificada = frase.toUpperCase().replace("J", "");
-        System.out.print("La nueva cadena es: " + fraseModificada);
+        System.out.print("La nueva frase es: " + fraseModificada);
         System.out.println(" ");
     }
 

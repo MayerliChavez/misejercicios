@@ -29,9 +29,7 @@ public class Automatas {
             }
          
         @SuppressWarnings("resource")
-        public void g2_crearAutomataA04() {
-            System.out.print("Ingrese una cifra: ");
-            String entrada = leer.nextLine().trim();
+        public void g2_crearAutomataA04(String entrada) {
             int q = 0;
             boolean esDecimal = false;
         
@@ -48,9 +46,9 @@ public class Automatas {
             }
         
             if (esDecimal || q == 4 || q == 7) {
-                System.out.println("El número ingresado es un número decimal: " + entrada);
+                System.out.println("El numero ingresado es un numero decimal: " + entrada);
             } else {
-                System.out.println("El número ingresado no es decimal...");
+                System.out.println("El numero ingresado no es numero decimal...");
             }
         }
 
