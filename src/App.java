@@ -4,8 +4,7 @@ import recursiones.Recursiones;
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner leer = new Scanner(System.in);
-        new presentacion.saludo().presentacion();
-
+        
        System.out.println("Serie de numeros");
        System.out.println("S2:");
        new series.Serienumeros().g2_crearSerienumericaS2();
@@ -67,7 +66,16 @@ public class App {
        System.out.println(" ");
        System.out.print("Loading: ");
        System.out.println("L03:");
-       //new loading.Loagings().g2_crearLoagingL03();
+       System.out.println(" ");
+       new loading.Loagings().g2_crearLoadingL03();
+
+       System.out.println(" ");
+       System.out.println("L05: ");
+       new loading.Loagings().g2_crearLoadingL05();
+
+       System.out.println(" ");
+       System.out.println("L05: ");
+       new loading.Loagings().g2_crearLoadingL08();
 
        System.out.println(" ");
        System.out.println("Recursion: ");
@@ -82,9 +90,9 @@ public class App {
        Recursiones op2= new Recursiones();
        System.out.println(" ");
        System.out.println("R04: ");
-       System.out.println("Ingrese la base de la potencia: ");
+       System.out.print("Ingrese la base de la potencia: ");
        int base = leer.nextInt();
-       System.out.println("Ingrese el exponenete de la potencia: ");
+       System.out.print("Ingrese el exponenete de la potencia: ");
        int potencia = leer.nextInt();
        int resultado = op2.g2_crearRecursionR04(base, potencia);
        System.out.print("La potencia del numero ingresado es: " + resultado);
@@ -95,7 +103,7 @@ public class App {
        System.out.println("A04:");
        new automata.Automatas().g2_crearAutomataA04();
 
-       
+
        leer.close();
     }
 }

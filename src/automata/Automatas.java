@@ -4,18 +4,18 @@ import java.util.Scanner;
 
 public class Automatas {
     Scanner leer = new Scanner(System.in);
-    final String alfabeto = "+;-;.;,;0;1;5;3;4;5;6;7;8;9; ";
+    final String alfabeto = "+;-;.;,;0;1;2;3;4;5;6;7;8;9; ";
     final int e = -10,
     decimal= 10, //Cifra del usuario
-    matriztransicion[][] ={//+     -     .     ,     0     1     2     3     4     5     6     7     8     9     enter
-                            {1,    1,    e,   e,     2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    e},      //q0
-                            {e,    e,    e,   e,     5,    5,    5,    5,    5,    5,    5,    5,    5,    5,    e},      //q1
-                            {e,    e,    3,   3,     e,    e,    e,    e,    e,    e,    e,    e,    e,    e,    e},      //q2
-                            {e,    e,    e,   e,     4,    4,    4,    4,    4,    4,    4,    4,    4,    4,    e},      //q3
-                            {e,    e,    e,   e,     4,    4,    4,    4,    4,    4,    4,    4,    4,    4,    decimal},//q4
-                            {e,    e,    6,   6,     e,    e,    e,    e,    e,    e,    e,    e,    e,    e,    e},      //q5
-                            {e,    e,    e,   e,     7,    7,    7,    7,    7,    7,    7,    7,    7,    7,    e},      //q6
-                            {e,    e,    e,   e,     7,    7,    7,    7,    7,    7,    7,    7,    7,    7,    decimal},//q7
+    matriztransicion[][] ={//+     -     .     ,     0     1     2     3     4     5     6     7     8     9     enter     espacio
+                            {1,    1,    e,   e,     2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    e,        e},      //q0
+                            {e,    e,    e,   e,     5,    5,    5,    5,    5,    5,    5,    5,    5,    5,    e,        e},      //q1
+                            {e,    e,    3,   3,     e,    e,    e,    e,    e,    e,    e,    e,    e,    e,    e,        e},      //q2
+                            {e,    e,    e,   e,     4,    4,    4,    4,    4,    4,    4,    4,    4,    4,    e,        e},      //q3
+                            {e,    e,    e,   e,     4,    4,    4,    4,    4,    4,    4,    4,    4,    4,    decimal,  decimal},//q4
+                            {e,    e,    6,   6,     e,    e,    e,    e,    e,    e,    e,    e,    e,    e,    e,        e},      //q5
+                            {e,    e,    e,   e,     7,    7,    7,    7,    7,    7,    7,    7,    7,    7,    e,        e},      //q6
+                            {e,    e,    e,   e,     7,    7,    7,    7,    7,    7,    7,    7,    7,    7,    decimal,  decimal},//q7
                           };
 
         @SuppressWarnings("resource")
@@ -29,23 +29,33 @@ public class Automatas {
             }
          
         @SuppressWarnings("resource")
-        public void  g2_crearAutomataA04(){
-        System.out.print("Ingrese una cifra: ");
-        String entrada = leer.nextLine();
+        public void g2_crearAutomataA04() {
+            System.out.print("Ingrese una cifra: ");
+            String entrada = leer.nextLine().trim();
             int q = 0;
-            Scanner w = new Scanner(entrada);
-            for(int inderxAlfa = 0; w.hasNext(); ){
-                inderxAlfa = getIndexAlfabeto(w.next());
-                if(inderxAlfa < 0 || matriztransicion[q][inderxAlfa] == e)
+            boolean esDecimal = false;
+        
+            for (int cifra = 0; cifra < entrada.length(); cifra++) {
+                String digito = String.valueOf(entrada.charAt(cifra));
+                int inderxAlfa = getIndexAlfabeto(digito);
+                if (inderxAlfa < 0 || matriztransicion[q][inderxAlfa] == e) {
                     break;
+                }
                 q = matriztransicion[q][inderxAlfa];
+                if (q == decimal) {
+                    esDecimal = true;
+                }
             }
-            switch (q) {
-                case decimal:
-                    System.out.print("El numero ingresado el un numero decinal " + entrada);
-                    break;
-                default:
-                System.out.print("El numero ingrasado no es decimal...");
+        
+            if (esDecimal || q == 4 || q == 7) {
+                System.out.println("El número ingresado es un número decimal: " + entrada);
+            } else {
+                System.out.println("El número ingresado no es decimal...");
             }
+        }
+
+        public void g2_crearArraysA05(){
+         
+
         }
 }

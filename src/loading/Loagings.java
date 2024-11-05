@@ -4,36 +4,85 @@ import java.util.Scanner;
 
 public class Loagings {
     Scanner leer = new Scanner(System.in);
-
-
-    public void g2_crearLoagingL03(){
-        System.out.print("Ingrese el rango de la operacion: ");
+    
+    public void g2_crearLoadingL03(){
+        System.out.print("Introduce el carácter para la barra de carga: ");
         char caracter = leer.next().charAt(0);
-        System.out.println("La operacion es: ");
-         
-         // Longitud de la barra
-         int longitudBarra = 20;
- 
-         // Desplazamiento del carácter de izquierda a derecha
-         for (int i = 0; i < longitudBarra; i++) {
-             // Limpia la consola
-             System.out.print("\r"); // Mueve el cursor a la posición de inicio
- 
-             // Crea la barra con el carácter en la posición i
-             for (int j = 0; j < longitudBarra; j++) {
-                 if (j == i) {
-                     System.out.print(caracter); // Imprime el carácter en la posición actual
-                 } else {
-                     System.out.print(" "); // Rellena con espacios
-                 }
-             }
- 
-             // Espera un poco antes de continuar con el siguiente movimiento
-             try{
-             Thread.sleep(200); // Espera 200 ms
-             }catch(InterruptedException e){
-                System.out.println("Retraso completado ");
-             }
+
+        int longitudBarra = 20;
+        for (int porcentaje = 0; porcentaje <= 100; porcentaje += 5) {
+            StringBuilder barra = new StringBuilder();
+
+            int posicion = (porcentaje * (longitudBarra - 1)) / 100;
+
+            for (int i = 0; i < longitudBarra; i++) {
+                if (i == posicion) {
+                    barra.append(caracter);
+                } else {
+                    barra.append(" ");
+                }
+            }
+                    System.out.print("\r[" + barra + "] " + porcentaje + "%");
+                    try{
+                        Thread.sleep(400); 
+                        }catch(InterruptedException e){
+                           System.out.println("Retraso completado ");
+                        }
+        }
+                System.out.println("\nCarga completada!");
+    }
+
+    public void g2_crearLoadingL05(){
+        int longitudBarra = 20;
+        for (int barraprogreso = 1; barraprogreso <= longitudBarra; barraprogreso++) {
+            int porcentaje = (barraprogreso * 100) / longitudBarra;
+            StringBuilder barra = new StringBuilder();
+
+            for (int avance = 0; avance < longitudBarra; avance++) {
+                if (avance < barraprogreso - 1) {
+                    barra.append("=");
+                } else if (avance == barraprogreso - 1) {
+                    barra.append(barraprogreso % 2 == 0 ? ">" : "-");
+                } else {
+                    barra.append(" ");
+                }
+            }
+
+            System.out.print("\r[" + barra + "] " + porcentaje + "%");
+            try{
+                Thread.sleep(400); 
+                }catch(InterruptedException e){
+                   System.out.println("Retraso completado ");
+                }
+        }
+        System.out.println("\n¡Carga completa!");
+    }
+
+    public void g2_crearLoadingL08(){
+            System.out.print("Ingrese su nombre y apellido: ");
+            String caracter = leer.nextLine().replace(" ", "");
+            
+            int longitudFija = 20; 
+            int longitud = caracter.length();
+            for (int barracarga = 1; barracarga <= longitud; barracarga++) {
+                int porcentaje = (barracarga * 100) / longitud;
+        
+                StringBuilder barra = new StringBuilder();
+        
+                for (int avance = 0; avance < longitudFija; avance++) {
+                    if (avance < barracarga && avance < longitud) {
+                        barra.append(caracter.charAt(avance));
+                    } else {
+                        barra.append(" ");
+                    }
+                }
+                System.out.print("\r[" + barra + "] " + porcentaje + "%");
+                
+                try {
+                    Thread.sleep(400);
+                } catch (InterruptedException e) {
+                    System.out.println("Retraso completado ");
+                }
             }
     }
 }
