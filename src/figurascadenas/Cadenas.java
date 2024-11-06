@@ -8,13 +8,15 @@ public class Cadenas {
     Scanner leer = new Scanner(System.in);
 
     public void g2_crearCadenaCaracteresC02(String frase){
-         int contador_letra =0;
-         for(char c: frase.toCharArray()){
-            if(Character.isLetter(c) && !esVocal(c)){
-                contador_letra++;
+        
+            int contador_letra =0;
+            for(char c: frase.toCharArray()){
+                if(Character.isLetter(c) && !esVocal(c)){
+                    contador_letra++;
+                }
             }
-        }
-        System.out.println("La frase ingresada tiene " + contador_letra + " letras.");
+            System.out.println("La frase ingresada tiene " + contador_letra + " letras.");
+
         System.out.println(" ");
     }
     public  static boolean esVocal(char c){
@@ -48,3 +50,4 @@ public class Cadenas {
     }
 
 }
+ 

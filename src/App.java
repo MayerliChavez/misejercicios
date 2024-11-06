@@ -2,6 +2,10 @@ import automata.Automatas;
 import java.util.Scanner;
 import loading.Loadings;
 import recursiones.Recursiones;
+import series.Seriecaracteres;
+import series.Serienumeros;
+import figurascadenas.Cadenas;
+import figurascadenas.Figuras;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -12,15 +16,13 @@ public class App {
         int datos;
         int base;
         int potencia;
-        int resultado = 0;
-        int factorial = 0;
         char caracter;
         String frase;
         String nombre;
         String digito;
         String entrada;
 
-      /*Serienumeros op = new Serienumeros();
+      Serienumeros op = new Serienumeros();
        System.out.println(">---------- Serie de numeros ----------<");
        System.out.println("" + "S2:");
        System.out.print("Ingrese el rango de la operacion a realizar: ");
@@ -102,7 +104,7 @@ public class App {
        System.out.println("" + "A03:");
        System.out.print("Introduca su nombre: ");
        nombre= leer.nextLine();
-       new ejercicioareglos.ArreglosCasos().g2_crearArraysA03(nombre);*/
+       new ejercicioareglos.ArreglosCasos().g2_crearArraysA03(nombre);
        
        
         Loadings op5 = new Loadings();
@@ -130,7 +132,7 @@ public class App {
         System.out.println(" " + "R01:");
         System.out.print("Ingrese el numero que desea conocer su factorial: ");
         datos = leer.nextInt();
-        op6.g2_crearRecursionR01(datos);
+        int factorial = op6.g2_crearRecursionR01(datos);
         System.out.print("El factorial del numero es: " + factorial);
         System.out.println(" ");
         System.out.println(" " + "R04: ");
@@ -138,7 +140,7 @@ public class App {
         base = leer.nextInt();
         System.out.print("Ingrese el exponenete de la potencia: ");
         potencia = leer.nextInt();
-        op6.g2_crearRecursionR04(base, potencia);
+        int resultado = op6.g2_crearRecursionR04(base, potencia);
         System.out.print("La potencia del numero ingresado es: " + resultado);
         System.out.println(" ");
         leer.nextLine();
